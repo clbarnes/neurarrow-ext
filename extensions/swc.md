@@ -1,6 +1,6 @@
 # net.clbarnes.swc
 
-This extension allows lossless conversion to and from
+This extension allows lossless conversion from
 [SWC files](https://www.sciencedirect.com/science/article/abs/pii/S0165027098000910?via%3Dihub)
 [as documented here](http://www.neuronland.org/NLMorphologyConverter/MorphologyFormats/SWC/Spec.html),
 with some ambiguities resolved by the [SWC+ documentation](https://neuroinformatics.nl/swcPlus/).
