@@ -12,14 +12,15 @@ with some ambiguities resolved by the [SWC+ documentation](https://neuroinformat
 
 ### Schema metadata
 
-#### `net.clbarnes.swc:header`
+#### `net.clbarnes.swc:header:*`
 
 - encoding: string
 - required: no
 
-Text content of all lines prior to the first non-empty, non-commented line, with all leading `#` characters and any shared whitespace trimmed.
+Text content of all lines prior to the first non-empty, non-commented line for a single SWC file,
+with all leading `#` characters and any shared whitespace trimmed.
 
-i.e. a SWC file starting
+i.e. a SWC file representing fragment `1234` starting
 
 ```swc
 # here is a long
@@ -37,6 +38,8 @@ here is a long
 description of
 the nature of this file
 ```
+
+under the key `net.clbarnes.swc:header:1234`.
 
 Note that the original publication and the later SWC+ specification both impose some structure on the header;
 here it is treated as raw text.
