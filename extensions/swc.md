@@ -1,16 +1,23 @@
 # net.clbarnes.swc
 
+- Extension version: 0.1
+- Neurarrow version: >=0.2
+
 This extension allows lossless conversion from
 [SWC files](https://www.sciencedirect.com/science/article/abs/pii/S0165027098000910?via%3Dihub)
 [as documented here](http://www.neuronland.org/NLMorphologyConverter/MorphologyFormats/SWC/Spec.html),
 with some ambiguities resolved by the [SWC+ documentation](https://neuroinformatics.nl/swcPlus/).
 
-- Extension version: 0.1
-- Neurarrow version: >=0.2
-
-## skeletons
+## `skeletons` extension
 
 ### Schema metadata
+
+#### `net.clbarnes.swc:version`
+
+- encoding: string
+- required: yes
+
+The version of this extension used when writing the table.
 
 #### `net.clbarnes.swc:header:*`
 
@@ -87,3 +94,5 @@ Refer to the `net.clbarnes.swc:type:*` schema metadata.
 The `radius` field is optional in neurarrow, but required in SWC.
 Missing radii SHOULD be filled in with `-1.0` when converting from neurarrow to SWC.
 Negative radii MUST be recorded as `null` when converting from SWC to neurarrow.
+
+SWC files conventionally use micrometer units.
