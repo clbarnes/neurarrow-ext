@@ -8,6 +8,10 @@ This extension allows lossless conversion from
 [as documented here](http://www.neuronland.org/NLMorphologyConverter/MorphologyFormats/SWC/Spec.html),
 with some ambiguities resolved by the [SWC+ documentation](https://neuroinformatics.nl/swcPlus/).
 
+## Implementations
+
+- [clbarnes/swc2na](https://github.com/clbarnes/swc2na) is a rust library which reads SWC files into neurarrow skeletons, and a CLI which reads SWC files and writes feather/ parquet files
+
 ## `skeletons` extension
 
 ### Schema metadata
