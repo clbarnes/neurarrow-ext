@@ -12,7 +12,7 @@ with some ambiguities resolved by the [SWC+ documentation](https://neuroinformat
 
 - [clbarnes/swc2na](https://github.com/clbarnes/swc2na) is a rust library which reads SWC files into neurarrow skeletons, and a CLI which reads SWC files and writes feather/ parquet files
 
-## `skeletons` extension
+## [`skeletons`](https://neurarrow.readthedocs.io/en/stable/schemas/skeletons.html) extension
 
 ### Schema metadata
 
@@ -100,3 +100,9 @@ Missing radii SHOULD be filled in with `-1.0` when converting from neurarrow to 
 Negative radii MUST be recorded as `null` when converting from SWC to neurarrow.
 
 SWC files conventionally use micrometer units.
+
+## Changelog
+
+### v0.1
+
+Initial implementation

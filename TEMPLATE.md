@@ -28,3 +28,9 @@ The version of this extension used when writing the table.
 - nullable: no
 
 A description.
+
+## Changelog
+
+### v0.1
+
+Initial implementation
