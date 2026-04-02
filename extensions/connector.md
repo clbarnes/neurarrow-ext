@@ -1,6 +1,6 @@
 # net.clbarnes.connector
 
-- Extension version: 0.1
+- Extension version: 0.2
 - Neurarrow version: >=0.2
 
 Point annotations associated with one or more connections.
@@ -14,7 +14,7 @@ Connections have a many-to-one relationship with connectors.
 
 ### Schema metadata
 
-#### `com.example.my_extension:version`
+#### `net.clbarnes.connectors:version`
 
 - encoding: string
 - required: yes
@@ -31,7 +31,7 @@ The version of this extension used when writing the table.
 
 ID of the connector, unique within this context.
 
-#### `net.clbarnes.connector:x`
+#### `x`, `y`, `z`
 
 - type: `float64`
 - required: yes
@@ -39,15 +39,7 @@ ID of the connector, unique within this context.
 
 Coordinate of the connector point.
 
-#### `net.clbarnes.connector:y`
-
-See above.
-
-#### `net.clbarnes.connector:z`
-
-See above.
-
-#### `net.clbarnes.connector:src_sample_ids`
+#### `src_sample_ids`
 
 - type: list of `uint64`
 - required: no (derived)
@@ -56,29 +48,19 @@ See above.
 IDs of samples from a point cloud or skeleton which are in the `src_sample_id` column of the connectors table.
 `null` means "not yet calculated"; empty list means no associated samples.
 
-#### `net.clbarnes.connector:tgt_sample_ids`
+#### `tgt_sample_ids`
 
 See above, for the `tgt_sample_id` column of the connectors table.
 
-#### `net.clbarnes.connector:src_fragment_ids`
+#### `src_fragment_ids`
 
 See above, for the derived `src_fragment_id` column of the connectors table.
 
-#### `net.clbarnes.connector:tgt_fragment_ids`
+#### `tgt_fragment_ids`
 
 See above, for the derived `tgt_fragment_id` column of the connectors table.
 
 ## [`connections`](https://neurarrow.readthedocs.io/en/stable/schemas/connections.html) extension
-
-### Fields
-
-#### `net.clbarnes.connector:connector_id`
-
-- type: `uint64`
-- required: yes
-- nullable: yes
-
-The ID of the entry in the `net.clbarnes.connectors` table to which this connection belongs.
 
 ## Changelog
 
